@@ -28,7 +28,7 @@
   <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
               <a class="navbar-brand fw-bold" href="#">TanyaDosen!</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +60,7 @@
                                     <h1>Silahkan Isi Form</h1>
                                     <form id="formKirimPesan">
 
-                                        <div class="bs-stepper">
+                                        <div id="stepper" class="bs-stepper">
                                             <div class="bs-stepper-header" role="tablist">
                                               <!-- your steps here -->
                                               <div class="step" data-target="#logins-part">
@@ -119,8 +119,9 @@
                                               </div>
                                             </div>
                                           </div>
-                                            <button type="button" id="next" class="btn btn-primary">Next</button>
-                                            <button type="button" id="previous" class="btn btn-primary">Previous</button>
+                                            <button type="button" id="next" onclick="stepper.next()" class="btn btn-primary">Next</button>
+                                            <button type="button" id="finish" class="btn btn-success d-none">Finish</button>
+                                            <button type="button" id="previous" onclick="stepper.previous()" class="btn btn-warning">Previous</button>
                                     </form>
                                 </div>
                             </div>
@@ -134,6 +135,12 @@
         </main>
       </div>
     </div>
+
+    <footer class="footer mt-auto py-3 bg-dark">
+        <div class="text-center">
+            <span class="text-muted">Tanya Dosen App | <a href="https://github.com/RobbiAbd/" style="text-decoration: none;">RobbiAbd</a></span>
+        </div>
+    </footer>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script

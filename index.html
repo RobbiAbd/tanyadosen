@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bs-stepper/dist/css/bs-stepper.min.css">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Tanya Dosen !</title>
+  </head>
+  <body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+              <a class="navbar-brand fw-bold" href="#">TanyaDosen!</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0" style="margin-left: auto;">
+                  <li class="nav-item">
+                    <a class="nav-link fw-bold" href="http://robbiabd.xyz/">Blog</a>
+                  </li>
+              </div>
+            </div>
+          </nav>
+      </header>
+
+    <div class="container">
+      <div class="content my-4">
+        <main>
+            <div class="card">
+                <div class="card-body">
+                  
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-sm-6 my-auto">
+                                        <img src="./assets/undraw_Chatting_re_j55r.png" class="card-img-top" alt="image chat" class="img-fluid">
+                                </div>
+                                <div class="col-sm-6">
+                                    <h1>Silahkan Isi Form</h1>
+                                    <form id="formKirimPesan">
+
+                                        <div class="bs-stepper">
+                                            <div class="bs-stepper-header" role="tablist">
+                                              <!-- your steps here -->
+                                              <div class="step" data-target="#logins-part">
+                                                <button type="button" class="step-trigger" role="tab" aria-controls="logins-part" id="logins-part-trigger">
+                                                  <span class="bs-stepper-circle">1</span>
+                                                  <span class="bs-stepper-label"></span>
+                                                </button>
+                                              </div>
+                                              <div class="line"></div>
+                                              <div class="step" data-target="#information-part">
+                                                <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+                                                  <span class="bs-stepper-circle">2</span>
+                                                  <span class="bs-stepper-label"></span>
+                                                </button>
+                                              </div>
+                                            </div>
+                                            <div class="bs-stepper-content">
+                                              <!-- your steps content here -->
+                                              <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
+                                                <section>
+                                                    <div class="mb-3">
+                                                        <label for="nama" class="form-label">Nama Kamu</label>
+                                                        <input type="text" class="form-control" id="nama">
+                                                      </div>
+                                                      <div class="mb-3">
+                                                          <label for="kelas" class="form-label">Kelas Kamu</label>
+                                                          <input type="text" class="form-control" id="kelas">
+                                                          <div class="form-text">contoh: "saya dari kelas...".</div>
+                                                      </div>
+                                                      <div class="mb-3">
+                                                        <label for="nomor" class="form-label">Nomor HP Dosen</label>
+                                                        <input type="text" class="form-control" id="nomor">
+                                                        <div class="form-text">contoh: +62xxxxxxxxx.</div>
+                                                    </div>
+                                                </section>
+                                              </div>
+                                              <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
+                                                <section>
+                                                    
+                                                    <div class="mb-3">
+                                                        <label for="pertanyaan" class="form-label">Pertanyaan Kamu</label>
+                                                        <input type="text" class="form-control" id="pertanyaan">
+                                                        <div class="form-text">contoh: "Apakah bapak ada waktu minggu ini ?".</div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="tujuan" class="form-label">Tujuan Menghubungi Dosen</label>
+                                                        <input type="text" class="form-control" id="tujuan">
+                                                        <div class="form-text">contoh: "Saya ingin bertanya...", "Saya ingin bimbingan...".</div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="ucapan" class="form-label">Ucapan Maaf dan Terima kasih</label>
+                                                        <input type="text" class="form-control" id="ucapan">
+                                                        <div class="form-text">Contoh: "Mohon maaf telah mengganggu waktunya, Terima kasih sebelumnya."</div>
+                                                    </div>
+                                                </section>
+                                              </div>
+                                            </div>
+                                          </div>
+                                            <button type="button" id="next" class="btn btn-primary">Next</button>
+                                            <button type="button" id="previous" class="btn btn-primary">Previous</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+              </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bs-stepper/dist/js/bs-stepper.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

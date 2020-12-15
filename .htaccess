@@ -16,9 +16,3 @@ Header set Expires 0
 
 # COOKIE
 Header edit Set-Cookie ^(.*)$ "$1; SameSite=Lax"
-
-# DISABLE ACCESS FILE
-<FilesMatch  "script\.js|style\.css">
-	Order Allow,Deny
-	Deny from all
-</FilesMatch>

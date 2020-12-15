@@ -48,7 +48,7 @@
     <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'> 
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -99,6 +99,13 @@
                                                   <span class="bs-stepper-label"></span>
                                                 </button>
                                               </div>
+                                              <div class="line"></div>
+                                              <div class="step" data-target="#result-part">
+                                                <button type="button" class="step-trigger" role="tab" aria-controls="result-part" id="result-part-trigger">
+                                                  <span class="bs-stepper-circle">3</span>
+                                                  <span class="bs-stepper-label">Hasil</span>
+                                                </button>
+                                              </div>
                                             </div>
                                             <div class="bs-stepper-content">
                                               <!-- your steps content here -->
@@ -114,6 +121,15 @@
                                                           <div class="form-text">contoh: "saya dari kelas...".</div>
                                                       </div>
                                                       <div class="mb-3">
+                                                        <label for="kelas" class="form-label">Gunakan salam untuk muslim</label>
+                                                        <br>
+                                                        <div class="form-check form-check-inline">
+                                                          <input class="form-check-input salam" type="checkbox" id="salamYa" checked value="1" name="salam">
+                                                          <label class="form-check-label" for="salamYa">Ya</label>
+                                                        </div>
+                                                      </div>
+                                                      
+                                                      <div class="mb-3">
                                                         <label for="nomor" class="form-label">Nomor HP Dosen</label>
                                                         <input type="text" class="form-control" id="nomor">
                                                         <div class="form-text">contoh: +62xxxxxxxxx.</div>
@@ -122,17 +138,34 @@
                                               </div>
                                               <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
                                                 <section>
-                                                    
-                                                    <div class="mb-3">
-                                                        <label for="pertanyaan" class="form-label">Pertanyaan Kamu</label>
-                                                        <input type="text" class="form-control" id="pertanyaan">
-                                                        <div class="form-text">contoh: "Apakah bapak ada waktu minggu ini ?".</div>
+                                                  <div class="mb-3">
+                                                    <div class="form-check">
+                                                      <input class="form-check-input kelamin" value="pak" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                                                      <label class="form-check-label" for="flexRadioDefault1">
+                                                        Dosen Pria
+                                                      </label>
                                                     </div>
+                                                    <div class="form-check">
+                                                      <input class="form-check-input kelamin" value="ibu" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                                      <label class="form-check-label" for="flexRadioDefault2">
+                                                       Dosen Wanita
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                    
+                                                    
                                                     <div class="mb-3">
                                                         <label for="tujuan" class="form-label">Tujuan Menghubungi Dosen</label>
                                                         <input type="text" class="form-control" id="tujuan">
                                                         <div class="form-text">contoh: "Saya ingin bertanya...", "Saya ingin bimbingan...".</div>
                                                     </div>
+
+                                                    <div class="mb-3">
+                                                      <label for="pertanyaan" class="form-label">Pertanyaan Kamu</label>
+                                                      <input type="text" class="form-control" id="pertanyaan">
+                                                      <div class="form-text">contoh: "Apakah bapak ada waktu minggu ini ?".</div>
+                                                    </div>
+
                                                     <div class="mb-3">
                                                         <label for="ucapan" class="form-label">Ucapan Maaf dan Terima kasih</label>
                                                         <input type="text" class="form-control" id="ucapan">
@@ -140,10 +173,24 @@
                                                     </div>
                                                 </section>
                                               </div>
+
+                                              <div id="result-part" class="content" role="tabpanel" aria-labelledby="result-part-trigger">
+                                                <section>
+                                                  <div class="mb-3">
+                                                    <button type="button" onclick="copyToClipboard()" class="btn btn-secondary my-3">Copy To Clipboard</button>
+                                                    <button type="button" onclick="sendMessage()" class="btn btn-primary my-3">WhatsApp</button>
+                                                    <div class="form-floating">
+                                                      <textarea class="form-control" placeholder="" id="result" style="height: 100px"></textarea>
+                                                      <label for="result">Hasil</label>
+                                                    </div>
+                                                    </div>
+                                                </section>
+                                              </div>
                                             </div>
                                           </div>
                                             <button type="button" id="next" onclick="stepper.next()" class="btn btn-primary">Next</button>
                                             <button type="button" id="finish" class="btn btn-success d-none">Finish</button>
+                                            <button type="button" id="reset" class="btn btn-danger d-none">Reset</button>
                                             <button type="button" id="previous" onclick="stepper.previous()" class="btn btn-warning">Previous</button>
                                     </form>
                                 </div>
@@ -173,6 +220,6 @@
     ></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bs-stepper/dist/js/bs-stepper.min.js"></script>
-    <script src="./script.js?v=1.0"></script>
+    <script src="./script.js?v=1.2"></script>
   </body>
 </html>

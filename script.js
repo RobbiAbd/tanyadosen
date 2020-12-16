@@ -37,7 +37,7 @@ finishStep.addEventListener("click", () => {
     let result = document.querySelector("#result");
     
     const ucapanSalam = salam != undefined || '' || null ? 'assalamualakum' : '';  
-    const kalimat = `${ucapanSalam} ${kelamin}. Nama saya ${nama}, ${kelas}. ${pertanyaan} ${tujuan}. ${ucapan}`;
+    const kalimat = `${ucapanSalam} ${kelamin}. Nama saya ${nama}, ${kelas}. ${tujuan} ${pertanyaan}. ${ucapan}`;
     result.value = kalimat;
     stepper.next();
 });
